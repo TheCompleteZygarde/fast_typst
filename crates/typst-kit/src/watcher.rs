@@ -35,10 +35,10 @@ pub struct Watcher {
 impl Watcher {
     /// How long to wait for a shortly following file system event when
     /// watching.
-    const BATCH_TIMEOUT: Duration = Duration::from_millis(100);
+    const BATCH_TIMEOUT: Duration = Duration::from_millis(5);
 
     /// The maximum time we spend batching events before quitting `wait()`.
-    const STARVE_TIMEOUT: Duration = Duration::from_millis(500);
+    const STARVE_TIMEOUT: Duration = Duration::from_millis(5);
 
     /// The interval in which we poll when falling back to poll watching
     /// due to missing files.
